@@ -1,3 +1,4 @@
+// components/QueryPage.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import QueryInput from '../components/QueryInput';
@@ -26,6 +27,11 @@ function QueryPage({ setQuery, setFilteredData }) {
   }, []);
 
   const handleRunQuery = () => {
+    if (!queryText || !isValidQuery(queryText)) {
+      alert('Please enter a valid query.');
+      return;
+    }
+
     setQuery(queryText);
     const conditions = parseQuery(queryText);
     const filteredResults = applyFilters(stockData, conditions);
@@ -33,9 +39,32 @@ function QueryPage({ setQuery, setFilteredData }) {
     navigate('/results');
   };
 
+  const isValidQuery = (query) => {
+    // Split the query into segments based on "AND"
+    const conditions = query.split(/\b(AND)\b/i);
+  
+    // Expression to check the format of each condition
+    const validPattern = /\b([A-Za-z\s]+)\s*(=|<=|>=|<|>)\s*([0-9]+(?:\.[0-9]*)?)\b/;
+  
+    for (let condition of conditions) {
+      condition = condition.trim();
+  
+      if (condition.toUpperCase() === 'AND') {
+        continue;
+      }
+  
+      if (!validPattern.test(condition)) {
+        return false;
+      }
+    }
+    return true;
+  };
+  
+
   return (
     <div className="query-page-container">
       <div className="query-box">
+        <h1 className="query-title">Create a Search Query</h1>
         <div className="query-input-section">
           <QueryInput
             query={queryText}
