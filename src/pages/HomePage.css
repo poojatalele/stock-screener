@@ -1,0 +1,25 @@
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f8f9fc;
+    font-family: Arial, sans-serif;
+  }
+  
+  .create-screen-button {
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    background-color: #6366f1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .create-screen-button:hover {
+    background-color: #4f46e5;
+  }
+  
