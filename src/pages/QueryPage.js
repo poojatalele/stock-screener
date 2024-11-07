@@ -64,7 +64,6 @@ function QueryPage({ setQuery, setFilteredData }) {
   return (
     <div className="query-page-container">
       <div className="query-box">
-        <h1 className="query-title">Create a Search Query</h1>
         <div className="query-input-section">
           <QueryInput
             query={queryText}

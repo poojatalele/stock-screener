@@ -1,49 +1,60 @@
+/* Results Page Style */
 .results-page {
   padding: 20px;
   font-family: Arial, sans-serif;
   color: #333;
 }
 
+/* Title Styling */
 .results-title {
-  font-size: 24px;
+  font-size: 1.5em; 
   font-weight: bold;
   color: #5153a1;
   margin-bottom: 10px;
+  text-align: center; 
 }
 
+/* Query Description Styling */
 .query-description {
-  font-size: 16px;
+  font-size: 1em;
   color: #333;
   margin-bottom: 20px;
 }
 
+/* Results Table Styling */
 .results-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 1em;
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
+/* Table Header and Cell Styling */
 .results-table th,
 .results-table td {
   padding: 12px 15px;
   text-align: left;
   border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9em; 
 }
 
+/* Header Background Color */
 .results-table th {
   background-color: #f9f9f9;
   font-weight: bold;
   color: #6366f1;
 }
 
+/* Row Alternating Color */
 .results-table tr:nth-child(even) {
   background-color: #fafafa;
 }
 
+/* Row Hover Effect */
 .results-table tr:hover {
   background-color: #f1f1f1;
 }
@@ -52,4 +63,57 @@
   text-align: center;
   padding: 20px;
   color: #888;
+  font-size: 1em; 
+}
+
+/* Responsive Media Queries */
+
+/* For Tablets and Smaller Devices */
+@media (max-width: 768px) {
+  .results-page {
+    padding: 10px;
+  }
+
+  .results-title {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+
+  .query-description {
+    font-size: 0.95em;
+  }
+
+  .results-table th,
+  .results-table td {
+    padding: 10px;
+    font-size: 0.85em;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+  .results-title {
+    font-size: 1.2em;
+  }
+
+  .query-description {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+
+  .results-table th,
+  .results-table td {
+    padding: 8px;
+    font-size: 0.8em;
+  }
+
+  .results-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .results-page {
+    padding: 5px;
+  }
 }

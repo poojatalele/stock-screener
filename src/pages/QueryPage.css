@@ -1,3 +1,4 @@
+/* Overall Container */
 .query-page-container {
     display: flex;
     flex-direction: column;
@@ -8,6 +9,7 @@
     font-family: Arial, sans-serif;
 }
 
+/* Main Box Styling */
 .query-box {
     background-color: #ffffff;
     border-radius: 12px;
@@ -20,6 +22,7 @@
     gap: 24px;
 }
 
+/* Title Styling */
 .query-title {
     font-size: 1.25em;
     font-weight: 600;
@@ -27,6 +30,7 @@
     margin-bottom: 12px;
 }
 
+/* Input Section Styling */
 .query-input-section {
     display: flex;
     gap: 16px;
@@ -40,6 +44,7 @@
     margin-bottom: 10px;
 }
 
+/* Input Box Styling */
 #query-input {
     flex: 1;
     height: 150px;
@@ -51,6 +56,7 @@
     background-color: #f8f9fc;
 }
 
+/* Example Box Styling */
 .example-box {
     flex: 1;
     background-color: #f1f5f9;
@@ -63,6 +69,7 @@
     box-sizing: border-box;
 }
 
+/* Example Box Heading Styling */
 .example-box h3 {
     font-size: 0.95em;
     font-weight: 600;
@@ -70,6 +77,7 @@
     margin-bottom: 8px;
 }
 
+/* Run Query Button */
 .run-query-button {
     width: 100%;
     padding: 12px;
@@ -96,6 +104,52 @@
     text-decoration: none;
 }
 
+/* Back Link */
 .back-link:hover {
     text-decoration: underline;
+}
+
+/* Responsive Media Queries */
+
+/* For Tablets and Smaller Devices */
+@media (max-width: 768px) {
+    .query-box {
+        width: 90%;
+        padding: 24px;
+    }
+
+    .query-input-section {
+        flex-direction: column;
+        gap: 12px; 
+    }
+
+    #query-input,
+    .example-box {
+        width: 100%;
+    }
+
+    .run-query-button {
+        font-size: 1em;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+    .query-box {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .query-title {
+        font-size: 1.2em;
+    }
+
+    #query-input {
+        height: 150px; 
+    }
+
+    .run-query-button {
+        padding: 12px;
+        font-size: 1em;
+    }
 }
