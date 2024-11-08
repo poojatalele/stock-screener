@@ -69,14 +69,13 @@ function QueryPage({ setQuery, setFilteredData }) {
             query={queryText}
             setQuery={setQueryText}
             className="query-input"
-            placeholder="Enter your conditions here..."
           />
           <div className="example-box">
             <h3>Custom query example</h3>
             <p>
-              Market capitalization &gt; 500 AND<br />
-              Price to earning &lt; 15 AND<br />
-              Return on capital employed &gt; 22%
+              Market Capitalization &gt; 500 AND<br />
+              P/E Ratio &lt; 15 AND<br />
+              ROE &gt; 22
             </p>
           </div>
         </div>
